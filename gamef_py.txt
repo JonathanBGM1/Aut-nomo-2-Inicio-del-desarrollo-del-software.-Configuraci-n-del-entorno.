@@ -1,0 +1,30 @@
+
+import random
+
+acciones = ["piedra", "papel", "tijera"]
+print ("Estas preparado para esta aventura")
+accion_usuario = input("Bienvenido al juego por favor, escoge <piedra>, <papel> o <tijera>: ")
+accion_maquina = random.choice(acciones)
+
+print(f"El usuario ha escogido {accion_usuario} y la maquina ha escogido {accion_maquina}")
+
+if accion_usuario == accion_maquina:
+    print("Ha habido un empate")
+elif accion_usuario == "piedra":
+    if accion_maquina == "papel":
+        print(f" La maquina ha escogido {accion_maquina} y ha ganado")
+    else:
+        print (f" la maquina ha escogido {accion_maquina} y ha perdido")
+elif accion_usuario == "papel":
+    if accion_maquina == "piedra":
+        print(f" La maquina ha escogido {accion_maquina} y ha perdido")
+    else:
+        print (f" la maquina ha escogido {accion_maquina} y ha ganado")
+elif accion_usuario == "tijera":
+    if accion_maquina == "piedra":
+        print(f" La maquina ha escogido {accion_maquina} y ha ganado")
+    else:
+        print (f" la maquina ha escogido {accion_maquina} y ha perdido")
+else:
+    print("Error, esa accion no es valida")
+    
